@@ -1,0 +1,6 @@
+FROM nvidia/cuda:11.0-runtime-ubuntu18.04
+
+COPY ./test/bin /opt/cub/test/bin
+
+WORKDIR /opt/cub/test/bin
+CMD ./test_iterator_sm600-610-620-700_nvvm_11.0_abi_nocdp_x86_64_thorough
